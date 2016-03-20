@@ -1,3 +1,4 @@
-# scott-lanning.com
+Scott Lanning
+-------------
 
 Website for http://scott-lanning.com.
