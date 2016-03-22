@@ -12,11 +12,6 @@ module.exports = [
         handler: ApplicationController.js
     }
     {
-        path: '/lib/{p*}'
-        method: 'GET'
-        handler: ApplicationController.lib
-    }
-    {
         path: '/css/{p*}'
         method: 'GET'
         handler: ApplicationController.css

@@ -61,8 +61,13 @@ unless module.parent
     # start server
     server.start ->
 
+        # log server start message to console in production
+        if process.env.NODE_ENV is 'production'
+            console.log "#{version} | Server start on port #{server.info.port} in #{process.env.NODE_ENV} mode on Node.js version #{process.versions.node}",
+
         # log server start message to console
-        console.log "Super hapi to be on port #{server.info.port} in #{process.env.NODE_ENV} mode on Node.js version #{process.versions.node}"
+        else
+            console.log "Super hapi to be on port #{server.info.port} in #{process.env.NODE_ENV} mode on Node.js version #{process.versions.node}"
 
 # export server
 module.exports = server
