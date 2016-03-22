@@ -5,6 +5,9 @@
 node_modules/
 
 # Build Files
+public/js/
+public/css/
+public/img/
 build/
 
 # NPM Debug Log
