@@ -29,23 +29,42 @@ html(lang="en")
 
         header
 
-            h1
-                a(href="/") Scott Lanning
+            div
 
-            nav
+                h1
+                    a(href="/") Scott Lanning
 
-                ul
-                    li
-                        a(href="#about") About
+                nav
 
-                    li
-                        a(href="#portfolio") Portfolio
+                    ul
+                        li
+                            a(href="#about") About
 
-                    li
-                        a(href="#contact") Contact
+                        li
+                            a(href="#portfolio") Portfolio
+
+                        li
+                            a(href="#contact") Contact
+
+        figure
+
 
         main
 
+            section
+
+                h1
+                    a(name="about") About
+
+            section
+
+                h1
+                    a(name="portfolio") Portfolio
+
+            section
+
+                h1
+                    a(name="contact") Contact
 
         //- global javascript
         script(type="text/javascript", src="/js/bundle.js?v=#{version}")
