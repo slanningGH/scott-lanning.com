@@ -1,7 +1,7 @@
 gulp                    = require "gulp"
 coffeelint              = require "gulp-coffeelint"
 
-# COFFEELINT
+# coffeelint
 gulp.task "lint", ->
     return gulp.src ["./public/coffee/**/*.coffee"]
         .pipe coffeelint()

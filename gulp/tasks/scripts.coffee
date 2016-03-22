@@ -5,7 +5,7 @@ buffer                  = require "vinyl-buffer"
 source                  = require "vinyl-source-stream"
 sourcemaps              = require "gulp-sourcemaps"
 
-# COMPILE AND CONVERT COFFEESCRIPT FILES
+# compile and convert coffeescript files
 gulp.task "scripts", (err) ->
     return browserify
         entries: ["public/coffee/global.coffee"]
@@ -16,6 +16,6 @@ gulp.task "scripts", (err) ->
     .pipe buffer()
     .pipe sourcemaps.init { loadMaps: true, debug: true }
     .pipe sourcemaps.write "./", { addComment: true }
-    .pipe gulp.dest "build/js"
+    .pipe gulp.dest "public/js"
     .on "error", (err) ->
         throw err

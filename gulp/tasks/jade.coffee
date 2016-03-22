@@ -2,12 +2,11 @@ gulp        = require "gulp"
 jade        = require "gulp-jade"
 version     = require("../../package.json").version
 
-# COMPILE AND CONVERT JADE FILES
+# compile and convert jade files
 gulp.task "jade", ->
 
-    return
-    # return gulp.src "public/views/*.jade"
-    #     .pipe jade { locals: { version: version } }
-    #     .pipe gulp.dest "build/"
-    #     .on "error", (err) ->
-    #         throw err
+    return gulp.src "public/views/*.jade"
+        .pipe jade { locals: { version: version } }
+        .pipe gulp.dest "build/"
+        .on "error", (err) ->
+            throw err

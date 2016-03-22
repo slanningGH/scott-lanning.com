@@ -1,6 +1,6 @@
 gulp                    = require "gulp"
 runSequence             = require "run-sequence"
 
-# DEFAULT TASK AND TASK BUNDLES
+# default task and task bundles
 gulp.task "default", (cb) ->
-    runSequence ["jade", "scripts", "stylus", "images", "lint", "watch"], "node-dev", cb
+    runSequence ["scripts", "stylus", "images", "lint", "watch"], "node-dev", cb

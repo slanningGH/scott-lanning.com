@@ -1,7 +1,7 @@
 gulp                    = require "gulp"
 bump                    = require "gulp-bump"
 
-# VERSION BUMP
+# version bump
 gulp.task "bump", ->
     return gulp.src ["./package.json"]
         .pipe bump()
