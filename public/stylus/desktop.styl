@@ -1,0 +1,58 @@
+@charset "UTF-8"
+@import "includes/_variables"
+@import "includes/_mixins"
+
+
+body
+    -webkit-font-smoothing: antialiased // font smoothing webkit mac
+    -moz-osx-font-smoothing: grayscale // font smoothing firefox osx
+    color: #333
+    font: normal normal normal $font-size/$line-height $font-family
+    letter-spacing: -0.01em
+
+header
+    box-shadow(0px 1px 1px 2px rgba(0,0,0,0.08))
+    clear()
+    background: #fff
+    padding: 10px 5%
+    position: fixed
+    top: 10px
+    left: 0
+    width: 90%
+
+    h1
+        float: left
+
+        a
+            color: #000
+            display: block
+            font-size: 36px
+            font-weight: 300
+            letter-spacing: -0.025em
+            padding: 4px 0
+
+    nav
+        float: right
+
+    li
+        float: left
+        margin: 0 20px
+
+        &:first-child
+            margin-left: 0
+
+        a
+            color: #333
+            display: block
+            font-size: $font-size + 2
+            font-weight: 300
+            padding: 15px 10px
+
+            &:hover
+                color: lighten(#333, 20%)
+
+main
+    height: 400px
+    width: 100%
+    background: transparent url("https://images.unsplash.com/photo-1433360405326-e50f909805b3") no-repeat scroll left top
+    background-size: cover
