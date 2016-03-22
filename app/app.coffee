@@ -2,6 +2,7 @@
 process.env.NODE_CONFIG_DIR     = "#{__dirname}/config"
 
 # require modules
+inert                   = require 'inert'
 fs                      = require 'fs'
 path                    = require 'path'
 Hapi                    = require 'hapi'
@@ -12,13 +13,20 @@ vision                  = require 'vision'
 # version
 version                 = require('../package.json').version
 
-# new hapi server
-server = new Hapi.Server()
+# new hapi server with default serving from public folder
+server = new Hapi.Server
+    connections:
+        routes:
+            files:
+                relativeTo: path.join __dirname, 'public'
 
 # register server params
 server.connection
     host: config.get 'host'
     port: config.get 'port'
+
+# register serving files from static directory
+server.register inert
 
 # static template configs
 server.register vision, (err) ->

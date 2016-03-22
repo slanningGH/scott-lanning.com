@@ -3,7 +3,7 @@ uglify                  = require "gulp-uglify"
 
 # UGLIFY JAVASCRIPT FILE
 gulp.task 'uglify', ->
-    return gulp.src 'source/js/bundle.js'
+    return gulp.src 'public/js/bundle.js'
         .pipe uglify()
         .pipe gulp.dest 'build/js'
         .on 'error', (err) ->

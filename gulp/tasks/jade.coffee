@@ -6,7 +6,7 @@ version     = require("../../package.json").version
 gulp.task "jade", ->
 
     return
-    # return gulp.src "source/views/*.jade"
+    # return gulp.src "public/views/*.jade"
     #     .pipe jade { locals: { version: version } }
     #     .pipe gulp.dest "build/"
     #     .on "error", (err) ->

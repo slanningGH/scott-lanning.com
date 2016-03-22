@@ -8,7 +8,7 @@ sourcemaps              = require "gulp-sourcemaps"
 # COMPILE AND CONVERT COFFEESCRIPT FILES
 gulp.task "scripts", (err) ->
     return browserify
-        entries: ["source/coffee/global.coffee"]
+        entries: ["public/coffee/global.coffee"]
         extensions: [".coffee"]
         transform: "coffeeify"
     .bundle()
