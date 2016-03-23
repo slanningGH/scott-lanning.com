@@ -18,12 +18,13 @@ html(lang="en")
         meta(name="viewport", content="initial-scale=1, maximum-scale=1")
 
         //- global css
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:100' rel='stylesheet' type='text/css'>
         link(rel="stylesheet", type="text/css", href="/css/styles.css?v=#{version}")
 
         //- favicon
         link(rel="shortcut icon", href="/img/favicon.ico", type="image/x-icon")
 
-        title Scott Lanning - Front End / UI / UX Engineer
+        title scott lanning (front end / ui / ux)
 
     body
 
@@ -32,39 +33,112 @@ html(lang="en")
             div
 
                 h1
-                    a(href="/") Scott Lanning
+                    a(href="/")
+                        | scott lanning
+                        em ( front end / ui / ux )
 
                 nav
 
                     ul
                         li
-                            a(href="#about") About
+                            a(href="#portfolio") portfolio
 
                         li
-                            a(href="#portfolio") Portfolio
+                            a(href="#about") about
 
                         li
-                            a(href="#contact") Contact
+                            a(href="#contact") contact
 
-        figure
+                        li
+                            a(href="#resume") resume
 
+        #cover
 
-        main
+        section
 
-            section
+            h1
+                a(name="portfolio") portfolio
+
+            p Aliquam in libero quis arcu consectetur ornare. Aenean fermentum, leo eu dapibus eleifend, dui elit euismod magna, eget euismod quam ex et orci. Ut eleifend vel nisi at auctor. Curabitur ac suscipit augue, nec ultricies magna.
+
+            figure.first
+                img(src="/img/code.png")
+                figcaption
+                    h1 Grasshopper Signup
+                    p Aliquam in libero quis arcu consectetur ornare. Aenean fermentum, leo eu dapibus eleifend, dui elit euismod magna.
+                    p.technologies
+                        strong Technologies:
+                        |  Angular, Node, HapiJS, Stylus, Jade
+
+            figure
+                img(src="/img/code.png")
+                figcaption
+                    h1 Blogging Tool
+                    p Aliquam in libero quis arcu consectetur ornare. Aenean fermentum, leo eu dapibus eleifend, dui elit euismod magna
+                    p.technologies
+                        strong Technologies:
+                        |  Angular, Node, HapiJS, Stylus, Jade
+
+            figure
+                img(src="/img/code.png")
+                figcaption
+                    h1 Grasshopper.com
+                    p Aliquam in libero quis arcu consectetur ornare. Aenean fermentum, leo eu dapibus eleifend, dui elit euismod magna
+                    p.technologies
+                        strong Technologies:
+                        |  HTML5, CSS3, Ruby
+
+            figure.first
+                img(src="/img/code.png")
+                figcaption
+                    h1 Grasshopper Signup
+                    p Aliquam in libero quis arcu consectetur ornare. Aenean fermentum, leo eu dapibus eleifend, dui elit euismod magna.
+                    p.technologies
+                        strong Technologies:
+                        |  Angular, Node, HapiJS, Stylus, Jade
+
+            figure
+                img(src="/img/code.png")
+                figcaption
+                    h1 Blogging Tool
+                    p Aliquam in libero quis arcu consectetur ornare. Aenean fermentum, leo eu dapibus eleifend, dui elit euismod magna
+                    p.technologies
+                        strong Technologies:
+                        |  Angular, Node, HapiJS, Stylus, Jade
+
+            figure
+                img(src="/img/code.png")
+                figcaption
+                    h1 Grasshopper.com
+                    p Aliquam in libero quis arcu consectetur ornare. Aenean fermentum, leo eu dapibus eleifend, dui elit euismod magna
+                    p.technologies
+                        strong Technologies:
+                        |  HTML5, CSS3, Ruby
+
+            p Nunc gravida eget libero nec tincidunt. Praesent et sollicitudin augue, a consequat diam. Nunc ornare sodales sollicitudin. Vivamus purus ante, consequat ut rutrum a, suscipit nec neque. Quisque nec leo posuere, pharetra eros nec, pretium neque.
+
+        section.about
+
+            div
 
                 h1
-                    a(name="about") About
+                    a(name="about") about
 
-            section
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ultrices nunc, vel dapibus enim. Quisque eget lobortis orci, nec ullamcorper dui. Vestibulum consectetur feugiat felis, id tempus risus sodales sed.
+
+                p Sed suscipit at tortor ut pretium. Vivamus ac fringilla nulla, nec viverra mi. Donec scelerisque ligula eget diam mattis, sit amet tincidunt sapien iaculis. Suspendisse vitae nisl quis massa hendrerit fringilla. Morbi gravida maximus mauris, vitae tincidunt ligula venenatis eget.
+
+        section
+
+            h1
+                a(name="contact") contact
+
+        section.resume
+
+            div
 
                 h1
-                    a(name="portfolio") Portfolio
-
-            section
-
-                h1
-                    a(name="contact") Contact
+                    a(name="resume") resume
 
         //- global javascript
         script(type="text/javascript", src="/js/bundle.js?v=#{version}")
