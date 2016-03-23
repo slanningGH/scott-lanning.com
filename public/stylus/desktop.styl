@@ -5,19 +5,23 @@
 body
     -webkit-font-smoothing: antialiased // font smoothing webkit mac
     -moz-osx-font-smoothing: grayscale // font smoothing firefox osx
-    color: #333
-    font: normal normal normal $font-size/$line-height $font-family
+    color: primary_font_color
+    font: normal normal normal font-size/line-height font-family
     letter-spacing: -0.01em
 
 h1
     font-weight: 300
-    font-size: $font-size + 20
+    font-size: font-size + 20
     letter-spacing: -0.01em
     margin-bottom: 30px
 
 p
     margin-bottom: 20px
     max-width: 640px
+
+em
+    color: tertiary_font_color
+    font-style: normal
 
 strong
     font-weight: bold
@@ -42,13 +46,13 @@ header
         a
             color: #000
             display: block
-            font-size: $font-size + 25
+            font-size: font-size + 25
             letter-spacing: -0.025em
             padding: 4px 0
 
         em
-            color: #b8b8b8
-            font-size: $font-size + 10
+            font-size: font-size + 10
+            font-style: normal
             padding-left: 10px
             vertical-align: middle
 
@@ -57,20 +61,20 @@ header
 
     li
         float: left
-        margin-left: 40px
+        margin-left: 20px
 
         &:first-child
             margin-left: 0
 
         a
-            color: #333
+            color: primary_font_color
             display: block
-            font-size: $font-size + 2
+            font-size: font-size + 2
             font-weight: 300
             padding: 21px 10px
 
             &:hover
-                color: lighten(#333, 20%)
+                color: lighten(primary_font_color, 20%)
 
 #cover
     height: 400px
@@ -80,22 +84,23 @@ header
 
 section
     center(1000px)
+    clear()
     padding: 50px 0
 
     &.about, &.resume
-        background: $primary
+        background: primary_accent_color
         width: 100%
 
         div
             center(1000px)
 
         h1, p
-            color: #fff
+            color: secondary_font_color
+
 
 figure
     float: left
     margin: 15px 15px 0 15px
-    height: 405px
     width: 300px
 
     &.first
@@ -112,11 +117,17 @@ figure
 
         h1
             font-weight: 300
-            font-size: $font-size + 4
-            margin: 20px 0 10px
+            font-size: font-size + 4
+            margin: 15px 0 20px
 
         p
-            font-size: $font-size - 2
+            font-size: font-size - 2
+            min-height: 96px
 
             &.technologies
                 margin: 0
+                height: auto
+                font-style: italic
+
+                span
+                    font-style: normal
