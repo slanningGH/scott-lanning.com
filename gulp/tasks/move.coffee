@@ -1,10 +1,8 @@
-gulp        = require "gulp"
-clean       = require "gulp-clean"
+gulp        = require 'gulp'
 
-# optimize and move image public files
-gulp.task "move", (err) ->
-    return gulp.src ["public/js/**/*", "public/css/**/*", "public/fonts/**/*", "public/images/**/*","public/files/**/*"]
-        .pipe clean {force: true}
-        .pipe gulp.dest "build", { base: "./" }
-        .on "error", (err) ->
+gulp.task "move", ->
+
+    gulp.src ['public/css/**/*', "public/img/**/*", "public/files/**/*"]
+    .pipe gulp.dest 'build'
+    .on 'error', (err) ->
             throw err
