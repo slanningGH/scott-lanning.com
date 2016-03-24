@@ -5,6 +5,6 @@ uglify                  = require "gulp-uglify"
 gulp.task 'uglify', ->
     return gulp.src 'public/js/bundle.js'
         .pipe uglify()
-        .pipe gulp.dest 'public/js'
+        .pipe gulp.dest 'build/js'
         .on 'error', (err) ->
             throw err
