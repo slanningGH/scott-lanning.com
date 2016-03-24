@@ -33,11 +33,11 @@
   "homepage": "http://scott-lanning.com",
   "readme": "https://github.com/skyout/scott-lanning.com#readme",
   "devDependencies": {
-    "browserify": "13.0.0",
-    "coffee-script": "1.10.0",
-    "coffeeify": "2.0.1",
-    "config": "1.19.0",
-    "fs": "0.0.2",
+    "browserify": "^13.0.0",
+    "coffee-script": "^1.10.0",
+    "coffeeify": "^2.0.1",
+    "config": "^1.19.0",
+    "fs": "^0.0.2",
     "gulp": "^3.8.0",
     "gulp-bump": "^2.0",
     "gulp-changed": "^1.2.1",
@@ -51,18 +51,18 @@
     "gulp-stylus": "^2.3",
     "gulp-uglify": "^1.5",
     "gulp-util": "^3.0.3",
-    "inert": "3.2.0",
-    "jade": "1.11.0",
-    "moment": "2.12.0",
-    "node-dev": "3.1.0",
-    "path": "0.12.7",
+    "inert": "^3.2.0",
+    "jade": "^1.11.0",
+    "moment": "^2.12.0",
+    "node-dev": "^3.1.0",
+    "path": "^0.12.7",
     "run-sequence": "^1.0.2",
-    "vinyl-buffer": "1.0.0",
-    "vinyl-source-stream": "1.1.0",
-    "vision": "4.0.1"
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "vision": "^4.0.1"
   },
   "dependencies": {
-    "hapi": "13.2.1",
-    "jquery": "2.2.2"
+    "hapi": "^13.2.1",
+    "jquery": "^2.2.2"
   }
 }

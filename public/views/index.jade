@@ -61,7 +61,7 @@ html(lang="en")
 
             p Aliquam in libero quis arcu consectetur ornare. Aenean fermentum, leo eu dapibus eleifend, dui elit euismod magna, eget euismod quam ex et orci. Ut eleifend vel nisi at auctor. Curabitur ac suscipit augue, nec ultricies magna.
 
-            figure.first
+            figure.no_margin
                 img(src="/img/code.png")
                 figcaption
                     h1 tips.js
@@ -82,7 +82,7 @@ html(lang="en")
                     p A blogging interface, API, scheduler, and public facing site.
                     p.technologies Technologies: AngularJS, HapiJS (Node), Browserify, Gulp, Jekyll (Ruby)
 
-            figure.first
+            figure.no_margin
                 img(src="/img/code.png")
                 figcaption
                     h1 grasshopper signup
@@ -103,28 +103,73 @@ html(lang="en")
                     p Personal portfolio site with a HapiJS development server all powered by Gulp and Browserify. All code is available on GitHub.
                     p.technologies Technologies: HTML5, CSS3, HapiJS, jQuery, CoffeeScript, Browserify, Gulp
 
-        section.about
+            p There are quite a few projects that I am unable to show on a public site. If you would like some more information about other work I've done please contact me using one of the methods listed in the contact section.
+
+
+        section#about
 
             div
 
                 h1
                     a(name="about") about
 
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ultrices nunc, vel dapibus enim. Quisque eget lobortis orci, nec ullamcorper dui. Vestibulum consectetur feugiat felis, id tempus risus sodales sed.
+                p My name is Scott Lanning and I&rsquo;m a UI Engineer from the greater Boston area. I have a lot of experience with a lot of aspects of user experience and user interface work. I have a great deal of experience with both website and web application development.
+                p I really have a passion for working with JavaScript and HTML5/CSS3. Now that NodeJS has taken off, knowing Javascript allows you to build both front end and backend applications as well as robust APIs.
+                p Currently I&rsquo;m a Senior UI Engineer for Grasshopper where I am tasked with creating and maintaining applications for both their US and UK signup process. We&rsquo;ve also been working on some great internal APIs and a blogging platform for the Grasshopper marketing team to use. I also really enjoy mentoring junior developers at Grasshopper, helping them learn and grow.
+                p My personal interests include soccer, golf, brewing beer, Magic: the Gathering, and Forged Alliance Forever.
 
-                p Sed suscipit at tortor ut pretium. Vivamus ac fringilla nulla, nec viverra mi. Donec scelerisque ligula eget diam mattis, sit amet tincidunt sapien iaculis. Suspendisse vitae nisl quis massa hendrerit fringilla. Morbi gravida maximus mauris, vitae tincidunt ligula venenatis eget.
-
-        section
+        section#contact
 
             h1
                 a(name="contact") contact
 
-        section.resume
+            p Feel free to contact me just to drop a line or if you have an idea for a project you&rsquo;d like to work on together.
+
+            ol
+
+                li
+                    span.icon m
+                    |  scott [at] scott-lanning [dot] com
+
+                li
+                    a(href="https://twitter.com/skyout", alt="Twitter", title="Twitter")
+                        span.icon t
+                        |  @skyout
+
+                li
+                    a(href="https://facebook.com/skyout", alt="Facebook", title="Facebook")
+                        span.icon f
+                        |  skyout
+
+                li.github
+                    a(href="http://github.com/~skyout", alt="GitHub", title="GitHub")
+                        span.icon g
+                        span.sub  ~
+                        | skyout
+
+                li.linkedin
+                    a(href="https://www.linkedin.com/in/skyout", alt="LinkedIn", title="LinkedIn")
+                        span.icon i
+                        |  LinkedIn
+
+        section#resume
 
             div
 
                 h1
                     a(name="resume") resume
+
+                ol
+
+                    li
+                        a(href="/files/scott_lanning_resume.pdf")
+                            span.icon p
+                            |  pdf
+
+                    li
+                        a(href="/files/scott_lanning_resume.docx")
+                            span.icon w
+                            |  word
 
         //- global javascript
         script(type="text/javascript", src="/js/bundle.js?v=#{version}")

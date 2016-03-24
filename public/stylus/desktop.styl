@@ -19,12 +19,22 @@ p
     margin-bottom: 20px
     max-width: 640px
 
+a
+    color: primary_font_color
+
+    &:hover
+        color: lighten(primary_font_color, 20%)
+
 em
     color: tertiary_font_color
     font-style: normal
 
 strong
     font-weight: bold
+
+.icon
+    font-family: icons
+    font-weight: normal
 
 header
     box-shadow(0px 1px 1px 0 rgba(0,0,0,0.08))
@@ -67,14 +77,10 @@ header
             margin-left: 0
 
         a
-            color: primary_font_color
             display: block
             font-size: font-size + 2
             font-weight: 300
             padding: 21px 10px
-
-            &:hover
-                color: lighten(primary_font_color, 20%)
 
 #cover
     height: 400px
@@ -87,23 +93,47 @@ section
     clear()
     padding: 50px 0
 
-    &.about, &.resume
-        background: primary_accent_color
-        width: 100%
+#about, #resume
+    background: primary_accent_color
+    width: 100%
 
-        div
-            center(1000px)
+    div
+        center(1000px)
 
-        h1, p
-            color: secondary_font_color
+    h1, p, a
+        color: secondary_font_color
 
+    a
+        &:hover
+            color: lighten(secondary_font_color, 20%)
+
+
+#contact, #resume
+
+    li
+        margin-bottom: 15px
+
+    .icon
+        margin-right: 10px
+        vertical-align: -2px
+
+    .github
+        margin-bottom: 10px
+
+    .linkedin
+
+        .icon
+            vertical-align: 0
+
+    .sub // fixes odd tilde in proxima nova
+        vertical-align: -5px
 
 figure
     float: left
     margin: 15px 15px 0 15px
     width: 300px
 
-    &.first
+    &.no_margin
         margin-left: 0
 
     img
@@ -131,3 +161,4 @@ figure
 
                 span
                     font-style: normal
+
