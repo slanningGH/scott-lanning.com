@@ -1,3 +1,24 @@
 @charset "UTF-8"
 @import "includes/_variables"
 @import "includes/_mixins"
+
+
+@media screen and (max-width: 1024px)
+
+    header
+
+        div
+            responsive-layout()
+
+
+    section
+        responsive-layout()
+        padding: 50px 5%
+
+    #about, #resume
+        padding: 50px 0
+        width: 100%
+
+        div
+            responsive-layout()
+            padding: 50px 5%
