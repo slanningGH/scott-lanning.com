@@ -13,7 +13,7 @@ h1
     font-weight: 300
     font-size: font-size + 20
     letter-spacing: -0.01em
-    margin-bottom: 30px
+    margin-bottom: 50px
 
 p
     margin-bottom: 20px
@@ -93,6 +93,14 @@ section
     clear()
     padding: 50px 0
 
+#portfolio
+
+    .demo
+        color: secondary_font_color
+
+        &:hover
+            color: lighten(secondary_font_color, 20%)
+
 #about, #resume
     background: primary_accent_color
     width: 100%
@@ -130,8 +138,8 @@ section
 
 figure
     float: left
-    margin: 15px 15px 0 15px
-    width: 300px
+    margin: 0 0 30px 30px
+    width: 485px
 
     &.no_margin
         margin-left: 0
@@ -141,22 +149,20 @@ figure
         margin: 0 auto
         background: #ccc
         height: 180px
-        width: 300px
+        width: 100%
 
     figcaption
+        min-height: 211px
 
         h1
             font-weight: 300
-            font-size: font-size + 4
+            font-size: font-size + 6
             margin: 15px 0 20px
 
         p
-            font-size: font-size - 2
-            min-height: 96px
 
             &.technologies
                 margin: 0
-                height: auto
                 font-style: italic
 
                 span
