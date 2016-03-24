@@ -23,7 +23,12 @@ module.exports =
         directory:
             path: "#{__dirname}/../../public/img"
 
-    # serves javascript files
+    # serves font files
     fonts:
         directory:
             path: "#{__dirname}/../../public/fonts"
+
+    # serves files
+    files:
+        directory:
+            path: "#{__dirname}/../../public/files"

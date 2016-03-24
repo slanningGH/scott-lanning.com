@@ -26,4 +26,9 @@ module.exports = [
         method: 'GET'
         handler: ApplicationController.fonts
     }
+    {
+        path: '/files/{p*}'
+        method: 'GET'
+        handler: ApplicationController.files
+    }
 ]
