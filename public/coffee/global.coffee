@@ -5,11 +5,34 @@ $ ->
     # scroll window to element
     scroll_to_section = (name) ->
 
+        # get anchor
+        selector = $("a[name='#{name}']")
+
+        # get closest section
+        section = selector?.closest("section")
+
+        # get padding of section
+        pixels = section?.css("padding-top")
+
+        # set pixel offset adjustment
+        adjustment = pixels?.replace("px", "")
+
         # get scroll position with compensation for section padding
-        position = $("a[name='#{name}']").offset().top - 50
+        if selector and adjustment
+
+            position = selector.offset().top - adjustment
 
         # if position animate page to element
-        if position then return $("html, body").animate { "scrollTop": position }, 500
+        if position then $("html, body").animate { "scrollTop": position }, 500, ->
+
+            # close menu
+            if $("nav.open").length then return toggle_menu()
+
+    # hide or show responsive menu
+    toggle_menu = ->
+
+        $("nav").toggleClass "open"
+        $(this).toggleClass "open"
 
     # hide/show responsive menu
     $(".menu").on "click", (e) ->
@@ -17,8 +40,8 @@ $ ->
         # prevent default action
         e.preventDefault()
 
-        $("nav").toggleClass "open"
-        $(this).toggleClass "open"
+        # toggle menu
+        toggle_menu()
 
     $("nav a").on "click", (e) ->
 

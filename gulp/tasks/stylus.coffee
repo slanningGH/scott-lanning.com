@@ -8,7 +8,7 @@ gulp.task "stylus", ->
         .pipe changed "public/stylus/**/*.styl"
         .pipe stylus({
             paths: ["public/css/"]
-            set: ["compress"]
+            compress: true
         })
         .pipe gulp.dest "public/css"
         .on "error", (err) ->
