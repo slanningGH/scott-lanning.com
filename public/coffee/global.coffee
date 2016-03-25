@@ -32,7 +32,7 @@ $ ->
     toggle_menu = ->
 
         $("nav").toggleClass "open"
-        $(this).toggleClass "open"
+        $(".menu").toggleClass "open"
 
     # hide/show responsive menu
     $(".menu").on "click", (e) ->

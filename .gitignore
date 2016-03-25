@@ -8,6 +8,7 @@ node_modules/
 public/js/
 public/css/
 public/img/
+public/bower/
 build/
 gulp/tasks/deploy.coffee
 Rakefile
