@@ -149,8 +149,8 @@ html(lang="en")
                 h1
                     a(name="about") about
 
-                p My name is Scott Lanning and I&rsquo;m a UI Engineer from the greater Boston area. I have a lot of experience with a lot of aspects of user experience and user interface work. I have a great deal of experience with both website and web application development.
-                p I really have a passion for working with JavaScript and HTML5/CSS3. Now that NodeJS has taken off, knowing Javascript allows me to build front-end and backend applications as well as robust APIs.
+                p My name is Scott Lanning and I&rsquo;m a UI Engineer from the greater Boston area. I have many years of experience in a variety of user experience and user interface work. I have a over six years of experience with both website and web application development.
+                p I really have a passion for working with JavaScript and HTML5/CSS3. Now that NodeJS has taken off, knowing JavaScript allows me to build front-end and backend applications as well as robust APIs.
                 p Currently I&rsquo;m a Senior UI Engineer for Grasshopper where I am tasked with creating and maintaining applications for both their US and UK signup process. We&rsquo;ve also been working on some great internal APIs and a blogging platform for the Grasshopper marketing team to use. I also really enjoy mentoring junior developers at Grasshopper, helping them learn and grow.
                 p My personal interests include soccer, golf, brewing beer, Magic: the Gathering, Forged Alliance, and spending time with my wife Stephanie and daughter Olivia.
 
@@ -213,3 +213,12 @@ html(lang="en")
 
         //- global javascript
         script(type="text/javascript", src="/js/bundle.js?v=#{version}")
+
+        //- analytics
+        script(type="text/javascript").
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-22257839-1', 'auto');
+            ga('send', 'pageview');
