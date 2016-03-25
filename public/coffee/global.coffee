@@ -11,8 +11,16 @@ $ ->
         # if position animate page to element
         if position then return $("html, body").animate { "scrollTop": position }, 500
 
+    # hide/show responsive menu
+    $(".menu").on "click", (e) ->
 
-    $("nav a").on 'click', (e) ->
+        # prevent default action
+        e.preventDefault()
+
+        $("nav").toggleClass "open"
+        $(this).toggleClass "open"
+
+    $("nav a").on "click", (e) ->
 
         # prevent default action
         e.preventDefault()

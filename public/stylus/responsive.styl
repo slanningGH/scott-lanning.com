@@ -8,8 +8,43 @@
     header
 
         div
+            clearFix()
             responsive-layout()
 
+        nav
+            clear: both
+            display: none
+            float: none
+            padding: 20px 0
+            position: relative
+            width: 100%
+            z-index: 2
+
+            li
+                float: none
+                margin: 0 0 7px 0
+
+                a
+                    padding: 10px 0
+                    font-size: font-size
+
+            &.open
+                display: block
+
+    .menu
+        float: right
+        display: block
+        color: primary_font_color
+        font-size: font-size + 15
+        padding: 11px 0 12px
+
+        &:after
+            content: 'd'
+
+        &.open
+
+            &:after
+                content: 'u'
 
     section
         responsive-layout()
@@ -24,9 +59,9 @@
             padding: 50px 5%
 
     figure
-        min-height: 435px
+        min-height: 440px
         margin: 0 0 30px 5%
-        width: 45%
+        width: 47.5%
 
         img
             height: auto
@@ -38,12 +73,69 @@
 
 @media screen and (max-width: 768px)
 
+    header
+
+        h1
+
+            a
+                font-size: font-size + 20
+
+                &:before, &:after
+                    font-size: font-size + 25
+
+            em
+                display: none
+
+    .menu
+        padding: 8px 0 9px
+
     figure
+        float: none
+        margin: 0 auto 50px auto
         min-height: 0
-        margin: 0 auto 30px auto
         max-width: 485px
         width: 100%
 
+        &.no_margin
+            margin: 0 auto 30px auto
 
     figcaption
         min-height: 0
+
+    p
+        max-width: 100%
+
+
+@media screen and (max-width: 480px)
+
+    body
+        font-size: font-size - 2
+
+    h1
+        font-size: font-size + 15
+
+    section
+        padding: 30px 5%
+
+    #about, #resume
+        padding: 30px 0
+
+        div
+            responsive-layout()
+            padding: 30px 5%
+
+    figcaption
+
+        h1
+            font-size: font-size + 2
+
+
+@media screen and (max-width: 480px)
+
+    header
+
+        h1
+
+            a
+                &:after, &:before
+                    display: none
