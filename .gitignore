@@ -9,6 +9,7 @@ public/js/
 public/css/
 public/img/
 build/
+gulp/tasks/deploy.coffee
 
 # NPM Debug Log
 npm-debug.log
