@@ -82,17 +82,16 @@ header
             font-weight: 300
             padding: 21px 10px
 
-section
-    center(1000px)
-    clear()
-    padding: 50px 0
-
-
 #cover
     height: 400px
     width: 100%
     background: transparent url("/img/code.png") no-repeat scroll left top
     background-size: cover
+
+section
+    center(1000px)
+    clear()
+    padding: 50px 0
 
 #portfolio
 
@@ -101,6 +100,39 @@ section
 
         &:hover
             color: lighten(secondary_font_color, 20%)
+
+    p
+        clear: both
+
+
+figure
+    float: left
+    margin: 0 0 30px 30px
+    width: 485px
+
+    &.no_margin
+        margin-left: 0
+
+    img
+        display: block
+        margin: 0 auto
+        background: #ccc
+        height: 273px
+        width: 100%
+
+figcaption
+    min-height: 211px
+
+    h1
+        font-weight: 300
+        font-size: font-size + 6
+        margin: 15px 0 20px
+
+    p
+
+        &.technologies
+            margin: 0
+            font-style: italic
 
 #about, #resume
     background: primary_accent_color
@@ -136,32 +168,3 @@ section
 
     .sub // fixes odd tilde in proxima nova
         vertical-align: -5px
-
-figure
-    float: left
-    margin: 0 0 30px 30px
-    width: 485px
-
-    &.no_margin
-        margin-left: 0
-
-    img
-        display: block
-        margin: 0 auto
-        background: #ccc
-        height: 273px
-        width: 100%
-
-    figcaption
-        min-height: 211px
-
-        h1
-            font-weight: 300
-            font-size: font-size + 6
-            margin: 15px 0 20px
-
-        p
-
-            &.technologies
-                margin: 0
-                font-style: italic
