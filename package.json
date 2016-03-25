@@ -1,6 +1,6 @@
 {
   "name": "scott-lanning.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Website for http://scott-lanning.com",
   "main": "gulpfile.js",
   "engines": {
