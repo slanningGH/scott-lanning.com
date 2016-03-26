@@ -1,6 +1,10 @@
+# Force directory slashes
+
 RewriteEngine on
 RewriteCond %{REQUEST_URI} /index\.html?$ [NC]
 RewriteRule ^(.*)index\.html?$ "/$1" [NC,R=301,NE,L]
+
+# Force 404s to root
 
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
