@@ -5,6 +5,8 @@ Scott Lanning
 
 Website for http://scott-lanning.com.
 
+## License
+
 ```
 MIT License
 
