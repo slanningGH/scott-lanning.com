@@ -8,6 +8,11 @@ module.exports =
             reply.view 'index',
                 version: version
 
+    notfound:
+        handler: (request, reply) ->
+            reply.view '404/index',
+                version: version
+
     # serves javascript files
     js:
         directory:

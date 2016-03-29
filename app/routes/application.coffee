@@ -7,6 +7,11 @@ module.exports = [
         config: ApplicationController.index
     }
     {
+        path: '/404/'
+        method: 'GET'
+        config: ApplicationController.notfound
+    }
+    {
         path: '/js/{p*}'
         method: 'GET'
         handler: ApplicationController.js
