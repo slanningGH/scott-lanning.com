@@ -64,17 +64,14 @@ header
             letter-spacing: -0.025em
             padding: 4px 0
 
-            &:before, &:after
-                content: "{"
+            &:after
+                content: "= ( ) {"
                 font-size: font-size + 30
                 color: #ededed
                 line-height: 1
-                margin-right: 15px
+                margin-left: 15px
                 vertical-align: -2px
 
-            &:after
-                content: "}"
-                margin: 0 0 0 15px
         em
             font-size: font-size + 10
             font-style: normal
@@ -184,3 +181,10 @@ figcaption
 
     .sub // fixes odd tilde in proxima nova
         vertical-align: -5px
+
+    .closing_bracket
+        &:after
+            content: '}'
+            font-size: font-size + 30
+            color: #ededed
+            line-height: 1
