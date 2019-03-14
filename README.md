@@ -5,6 +5,21 @@ Scott Lanning
 
 Website for http://scott-lanning.com.
 
+## Usage
+
+To install dependencies:
+``` npm install```
+
+To start the development server:
+```npm start```
+
+To build static site:
+```npm run build```
+
+## Features
+* Webpack
+* Stylus
+
 ## License
 
 ```
