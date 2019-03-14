@@ -11,7 +11,7 @@ const webpack = require('webpack');
 const version = require('./package.json').version;
 
 const webpackConfig = ({ production } = {}) => {
-    // set up webpack configuration object used for development
+    // set up webpack configuration object
     const config = {
         entry: {
             // bundle all code in a file called bundle.index.[hash].js
@@ -115,4 +115,5 @@ const webpackConfig = ({ production } = {}) => {
 
     return config;
 }
+
 module.exports = webpackConfig;
