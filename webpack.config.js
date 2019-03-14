@@ -14,16 +14,13 @@ const webpackConfig = ({ production } = {}) => {
     // set up webpack configuration object used for development
     const config = {
         entry: {
-            // using two bundles or chunks
-            // bundle third-party code in a file called bundle.thirdparty.[hash].js
-            index: './public/js/index.js', // bundle all non-thirdparty code in a file called bundle.index.[hash].js
+            // bundle all code in a file called bundle.index.[hash].js
+            index: './public/js/index.js',
         },
         // The webpack output property describes to webpack how to treat bundled code.
         output: {
             path: path.resolve(__dirname, 'build'),
             filename: `js/bundle.[name].[hash].js?${version}`,
-            // has to match webpack dev server path i.e. localhost:8080
-            // required so that css loads url() and fonts in dev, removed for production
             publicPath: '/',
         },
         devServer: {
@@ -60,17 +57,19 @@ const webpackConfig = ({ production } = {}) => {
                 },
             ]),
             // create index html file
+            // TODO: Minification is currently not working with 3.2.0
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 inject: 'head',
                 template: './public/index.html',
             }),
             // create 404 page
+            // TODO: Minification is currently not working with 3.2.0
             new HtmlWebpackPlugin({
                 filename: '404.html',
                 template: './public/404.html',
             }),
-            // add provide bundle with jquery
+            // provide bundle with jquery
             new webpack.ProvidePlugin({
     			$: 'jquery',
     		}),
