@@ -69,10 +69,6 @@ const webpackConfig = ({ production } = {}) => {
                 filename: '404.html',
                 template: './public/404.html',
             }),
-            // provide bundle with jquery
-            new webpack.ProvidePlugin({
-    			$: 'jquery',
-    		}),
             // extract css from bundle into its own file
             new MiniCssExtractPlugin({
     			filename: 'styles/styles.[hash].css'

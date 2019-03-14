@@ -1,3 +1,4 @@
+// import styles for webpack to render
 import '../css/styles.styl';
 
 $(function() {
@@ -6,7 +7,7 @@ $(function() {
     var scroll_to_section = function(name) {
 
         // get anchor
-        let position;
+        var position;
         var selector = $(`a[name='${name}']`);
 
         // get closest section
@@ -20,16 +21,16 @@ $(function() {
 
         // get scroll position with compensation for section padding
         if (selector && adjustment) {
-
             position = selector.offset().top - adjustment;
         }
 
         // if position animate page to element
-        if (position) { return $('html, body').animate({ 'scrollTop': position }, 500, function() {
-
+        if (position) {
+            return $('html, body').animate({ 'scrollTop': position }, 500, function() {
             // close menu
-            if ($('nav.open').length) { return toggle_menu(); }
-        }); }
+                if ($('nav.open').length) { return toggle_menu(); }
+            });
+        }
     };
 
     // hide or show responsive menu
