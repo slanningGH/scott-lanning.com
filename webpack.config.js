@@ -1,7 +1,7 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
@@ -71,7 +71,7 @@ const webpackConfig = ({ production } = {}) => {
             }),
             // extract css from bundle into its own file
             new MiniCssExtractPlugin({
-    			filename: 'styles/styles.[hash].css'
+    			filename: 'styles/styles.[hash].css',
     		}),
             // minify/optimize CSS
             new OptimizeCSSAssetsPlugin({}),
@@ -81,7 +81,7 @@ const webpackConfig = ({ production } = {}) => {
                 disable: !production,
                 pngquant: {
                     quality: '70-90',
-                }
+                },
             }),
         ],
         module: {
@@ -93,8 +93,8 @@ const webpackConfig = ({ production } = {}) => {
                         {
                             loader: MiniCssExtractPlugin.loader,
                             options: {
-                                publicPath: 'styles/'
-                            }
+                                publicPath: 'styles/',
+                            },
                         },
                         'css-loader',
                         'stylus-loader',
@@ -103,7 +103,7 @@ const webpackConfig = ({ production } = {}) => {
                 // load and process font files
                 {
                     test: /.(woff(2)?|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-                    use: 'file-loader?name=fonts/[name].[ext]'
+                    use: 'file-loader?name=fonts/[name].[ext]',
                 },
             ]
         }
