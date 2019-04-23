@@ -18,6 +18,7 @@ To build static site:
 
 ## Features
 * Webpack
+* HTML5
 * Stylus
 
 ## License
