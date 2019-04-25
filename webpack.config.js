@@ -60,13 +60,14 @@ const webpackConfig = ({ production } = {}) => {
             // TODO: Minification is currently not working with 3.2.0
             new HtmlWebpackPlugin({
                 filename: 'index.html',
-                inject: 'head',
+                minify: true,
                 template: './public/index.html',
             }),
             // create 404 page
             // TODO: Minification is currently not working with 3.2.0
             new HtmlWebpackPlugin({
                 filename: '404.html',
+                minify: true,
                 template: './public/404.html',
             }),
             // extract css from bundle into its own file
