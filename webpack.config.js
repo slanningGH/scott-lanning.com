@@ -47,6 +47,10 @@ const webpackConfig = ({ production } = {}) => {
                     to: 'fonts',
                 },
                 {
+                    from: 'public/lib',
+                    to: 'lib',
+                },
+                {
                     from: 'public/.htaccess',
                     to: '.htaccess',
                     toType: 'file',
